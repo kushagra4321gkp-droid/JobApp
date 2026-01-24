@@ -40,7 +40,7 @@ public class JobRepo {
 
     public void addJob(JobPost job){
         jobs.add(job);
-        System.out.println(jobs);
+//        System.out.println(jobs);
     }
 
 }
