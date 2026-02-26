@@ -45,3 +45,30 @@ pipeline {
     }
 }
 
+---
+
+## 📸 Pipeline Insights
+
+### Status Dashboard
+![Status](images/CI.png)
+
+### Pipeline Overview
+![Pipeline Overview](images/Pipeline_Overview.png)
+
+### Build Timing
+![Timing](images/Timing.png)
+
+---
+
+## 📊 Build Performance
+
+| Metric | Value |
+| :--- | :--- |
+| **Total Build Time** | ~5 seconds |
+| **Tests Run** | 1 |
+| **Build Status** | **SUCCESS** |
+
+---
+
+**Author:** Kushagra  
+*DevOps & Full Stack Enthusiast*
