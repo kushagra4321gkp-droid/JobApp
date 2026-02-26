@@ -45,13 +45,7 @@ pipeline {
 ## 📸 Pipeline Insights
 
 ### Status Dashboard
-![Status](images/CI.png)
-
-### Pipeline Overview
-![Pipeline Overview](images/Pipeline_Overview.png)
-
-### Timing
-![Timing](images/Timing.png)
+![Status](images/ci.png)
 
 ---
 
