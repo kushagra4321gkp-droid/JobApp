@@ -4,28 +4,23 @@
   <img src="images/web-app-preview.png" width="800" alt="Kushagra Job Portal Preview">
 </p>
 
-This project is a comprehensive **Job Portal Web Application** built using **Spring Boot** and managed with a professional **Jenkins CI/CD Pipeline**. It showcases full-stack development skills alongside modern DevOps practices.
+This project is a comprehensive **Job Portal Web Application** built using **Spring Boot** and managed with a professional **Jenkins CI/CD Pipeline**.
 
 ---
 
 ## 💻 Application Features & Architecture
-The **JobApp** is built with a robust internal structure:
-
-* **MVC Architecture**: Organized into clean layers—Model (`JobPost.java`), View (JSP), and Controller (`JobController.java`).
-* **View Technologies**: Uses **JSP (JavaServer Pages)** for dynamic content rendering with custom CSS (`style.css`, `style1.css`).
-* **REST API**: The `JobController` exposes REST endpoints to allow external systems to programmatically access job information.
-* **Service & Repo Layers**: Includes dedicated service and repository packages for scalable data handling.
-
+* **MVC Architecture**: Model (`JobPost.java`), View (JSP), and Controller (`JobController.java`).
+* **View Technologies**: Uses **JSP** with custom CSS (`style.css`, `style1.css`).
+* **REST API**: `JobController` exposes endpoints for data access.
 
 ---
 
 ## ⚙️ DevOps & CI Pipeline
-The project features a **Declarative Jenkins Pipeline** that automates the software lifecycle:
-
-1.  **Workspace Cleanup**: Ensures a fresh environment using `deleteDir()`.
-2.  **Build Stage**: Uses **Maven** to compile the project and resolve dependencies.
-3.  **Test Stage**: Runs unit tests automatically to ensure code quality.
-4.  **Deliver Stage**: Executes a custom `deliver.sh` script to verify the generated `.jar` artifact.
+The project features a **Declarative Jenkins Pipeline**:
+1. **Workspace Cleanup**: Uses `deleteDir()`.
+2. **Build Stage**: Maven compiles the project.
+3. **Test Stage**: Runs unit tests.
+4. **Deliver Stage**: Executes `deliver.sh` to verify the `.jar`.
 
 ### Pipeline as Code
 ```groovy
@@ -55,7 +50,7 @@ pipeline {
 ### Pipeline Overview
 ![Pipeline Overview](images/Pipeline_Overview.png)
 
-### Build Timing
+### Timing
 ![Timing](images/Timing.png)
 
 ---
