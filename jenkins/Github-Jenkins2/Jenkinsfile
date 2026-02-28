@@ -21,10 +21,5 @@ pipeline {
                 sh 'sh jenkins/scripts/deliver.sh'
             }
         }
-        stage('Complete') {
-            steps {
-                echo 'Job Completed! -> Using Poll SCM and CrontabGuru to set cronjob'
-            }
-        }
     }
 }
