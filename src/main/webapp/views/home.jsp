@@ -38,7 +38,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a class="nav-link" href="https://telusko.com/">Contact</a>
+					<a class="nav-link" href="https://kushagra-portfolio-kappa.vercel.app/">Contact</a>
 				</li>
 			</ul>
 		</div>
