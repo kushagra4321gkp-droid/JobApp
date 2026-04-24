@@ -4,19 +4,48 @@
   <img src="images/web-app-preview.png" width="800" alt="Kushagra Job Portal Preview">
 </p>
 
-This project is a comprehensive **Job Portal Web Application** built using **Spring Boot** and managed with a professional **Jenkins CI/CD Pipeline**.
+This project is a comprehensive **Job Portal Web Application** built using **Spring Boot**, deployed live on **Railway**, and managed with a professional **Jenkins CI/CD Pipeline**.
+
+🌐 **Live Demo**: [full-stackjob-app.up.railway.app](https://full-stackjob-app.up.railway.app)
 
 ---
 
 ## 💻 Application Features & Architecture
+
 * **MVC Architecture**: Model (`JobPost.java`), View (JSP), and Controller (`JobController.java`).
 * **View Technologies**: Uses **JSP** with custom CSS (`style.css`, `style1.css`).
 * **REST API**: `JobController` exposes endpoints for data access.
 
 ---
 
+## 🚀 Deployment
+
+The app is deployed on **Railway** using Docker and WAR packaging.
+
+* **Packaging**: Spring Boot WAR (required for JSP support with embedded Tomcat)
+* **Containerization**: Multi-stage Dockerfile — Maven builds the WAR, Eclipse Temurin runs it
+* **Hosting**: Railway — auto-deploys on every `git push` to `main`
+
+### Dockerfile
+```dockerfile
+FROM maven:3.9.6-eclipse-temurin-21 AS build
+WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
+
+FROM eclipse-temurin:21-jdk
+WORKDIR /app
+COPY --from=build /app/target/*.war app.war
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.war"]
+```
+
+---
+
 ## ⚙️ DevOps & CI Pipeline
+
 The project features a **Declarative Jenkins Pipeline**:
+
 1. **Workspace Cleanup**: Uses `deleteDir()`.
 2. **Build Stage**: Maven compiles the project.
 3. **Test Stage**: Runs unit tests.
@@ -57,10 +86,9 @@ pipeline {
 | **Total Build Time** | ~5 seconds |
 | **Tests Run** | 1 |
 | **Build Status** | **SUCCESS** |
+| **Deployment** | Railway (Live) |
 
 ---
 
 **Author:** Kushagra  
 *DevOps & Full Stack Enthusiast*
-
-
